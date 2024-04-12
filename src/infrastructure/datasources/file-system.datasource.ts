@@ -55,7 +55,6 @@ export class FileSystemDatasource implements LogDatasource {
 
     }
 
-
     async getLogs(severityLevel: LogSeverityLevel): Promise<LogEntity[]> {
         switch ( severityLevel ) {
             case LogSeverityLevel.low:

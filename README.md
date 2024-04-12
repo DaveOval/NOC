@@ -10,3 +10,5 @@ MAILE_SECRET_KEY=
 
 PROD=
 ```
+
+3. Ejecutar el comando ```npm install```
