@@ -1,4 +1,5 @@
 import { envs } from "./config/plugins/envs.plugin";
+import { MongoDatabase } from "./data/mongo";
 import { Server } from "./presentation/server";
 
 (() => {
@@ -6,6 +7,11 @@ import { Server } from "./presentation/server";
 })();
 
 
-function main () {
-    Server.start();
+async function main () {
+    await MongoDatabase.connect({
+        mongoUrl: envs.MONGO_URL,
+        dbName: envs.MONGO_DB_NAME,
+    });
+
+    //Server.start();
 }

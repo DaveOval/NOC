@@ -43,5 +43,8 @@ export class LogEntity {
         return log;
     }
 
+    static fromObject = ( object: {[key: string]} ) => {
+
+    }
 }
 

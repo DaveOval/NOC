@@ -10,8 +10,6 @@ const fileSystemlogRepository = new LogRepositoryImpl(
 );
 const emailService = new EmailService(  );
 
-
-
 export class Server {
     public static start() {
         console.log("Server started...");
