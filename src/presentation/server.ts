@@ -35,18 +35,18 @@ export class Server {
             ["dave_u@outlook.com"]
         ); */
 
-        CronService.createJob(
-           '*/5 * * * * *',
-           () => {
-               const url = "https://google.com";
+        // CronService.createJob(
+        //    '*/5 * * * * *',
+        //    () => {
+        //        const url = "https://google.com";
 
-               new CheckServivemultiple(
-                   [fsLogRepository , postgresLogRepository , mongoLogRepository],
-                   () => console.log( `${ url } is ok` ),
-                   ( error ) => console.log( error ),
-               ).execute(url);
-           }
-        );
+        //        new CheckServivemultiple(
+        //            [fsLogRepository , postgresLogRepository , mongoLogRepository],
+        //            () => console.log( `${ url } is ok` ),
+        //            ( error ) => console.log( error ),
+        //        ).execute(url);
+        //    }
+        // );
 
     }
 }
